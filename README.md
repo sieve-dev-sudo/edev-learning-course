@@ -19,11 +19,14 @@ webdev-course-landing/
 ├── index.html            # Home page — hero section + login card
 ├── css/
 │   └── style.css         # Shared styles for every page
+├── js/
+│   └── main.js           # Shared behavior: mobile menu, scroll reveal, form validation
 └── html/
     ├── about.html        # About EDev Learning + course stats
     ├── service.html      # Services offered (course, mentorship, etc.)
     ├── design.html       # Showcase of student project modules
-    └── contact.html      # Contact info + message form
+    ├── contact.html      # Contact info + message form
+    └── signup.html       # Create-account page
 ```
 
 ## Pages
@@ -35,13 +38,17 @@ webdev-course-landing/
 | Service | `html/service.html` | Grid of offered services (courses, mentorship, career support) |
 | Design | `html/design.html` | Card gallery of student project modules |
 | Contact | `html/contact.html` | Contact details and a message form |
+| Sign Up | `html/signup.html` | Create-account form with password confirmation |
 
 ## Tech Stack
 
 - **HTML5** — semantic page structure
 - **CSS3** — Flexbox, CSS Grid, custom properties (`:root` variables), responsive media queries
 - **SVG** — hand-drawn tree silhouette, social icons, and page icons (no external image dependencies)
-- **Vanilla JS** — minimal, just prevents demo forms from submitting
+- **Vanilla JS** (`js/main.js`, shared across every page) —
+  - Mobile hamburger menu for the nav on small screens
+  - Scroll-reveal fade-in animation for cards/sections (`IntersectionObserver`)
+  - Lightweight client-side form validation (required fields + email format) on the login and contact forms, with inline error messages and a success banner
 
 ## Design Notes
 
@@ -58,4 +65,3 @@ webdev-course-landing/
 - Hook up the login/sign up/contact forms to a real backend
 - Add active-page nav highlighting via JavaScript
 - Replace the SVG tree with a real background photo
-- Add a mobile hamburger menu for the nav links
