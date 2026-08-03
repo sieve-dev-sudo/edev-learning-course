@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="km">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WebDev Course Landing | EDev Learning</title>
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDev Learning</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
   <!-- navbar -->
   <nav class="navbar">
     <a href="index.html" class="logo">EDev Learning <span class="moon">🌙</span></a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html" class="active">HOME</a></li>
       <li><a href="html/about.html">ABOUT</a></li>
       <li><a href="html/service.html">SERVICE</a></li>
@@ -38,30 +38,35 @@
       <input type="text" placeholder="Type To text" aria-label="Search">
       <button type="submit">Search</button>
     </form>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </nav>
 
   <!-- hero content -->
   <div class="hero-content">
     <div class="hero-text">
-      <h1>Learn Web <span class="accent">Development</span><br>From Scratch</h1>
+      <h1 id="heroTypewriter" class="typewriter-heading" aria-label="Learn Web Development From Scratch"><span class="tw-text"></span><span class="tw-cursor" aria-hidden="true"></span><noscript>Learn Web <span class="accent">Development</span><br>From Scratch</noscript></h1>
       <p>Master HTML, CSS, and JavaScript through hands-on projects and real course guidance. Whether you're starting out or leveling up, this course walks you through building modern, responsive websites step by step.</p>
       <a href="html/service.html" class="join-btn">ENROLL NOW</a>
     </div>
 
     <div class="login-card">
       <div class="login-tab">Login Here</div>
-      <form onsubmit="return false;">
+      <form data-validate onsubmit="return false;">
+        <div class="form-success" role="status" hidden>You're logged in! (demo only)</div>
         <div class="field">
           <label for="email">Enter Email Here</label>
-          <input type="email" id="email" placeholder=" ">
+          <input type="email" id="email" placeholder=" " required>
         </div>
         <div class="field">
           <label for="password">Enter Password Here</label>
-          <input type="password" id="password" placeholder=" ">
+          <input type="password" id="password" placeholder=" " required>
         </div>
         <button type="submit" class="login-btn">Login</button>
       </form>
-      <p class="signup-line">Don't have an account<br><a href="#signup">Sign up</a> here</p>
+      <p class="signup-line">Don't have an account<br><a href="html/signup.html">Sign up</a> here</p>
       <p class="or-line">Log in with</p>
       <div class="socials">
         <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
@@ -78,5 +83,6 @@
   &copy; 2026 EDev Learning. All rights reserved.
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
