@@ -7,7 +7,7 @@
   --white:#ffffff;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth; height:100%;}
+html{scroll-behavior:smooth; height:100%; overflow-y:scroll;}
 body{
   font-family:'Georgia','Times New Roman',serif;
   background:#0a1220;
@@ -103,6 +103,7 @@ body{
   display:flex;
   align-items:center;
   justify-content:space-between;
+  width:100%;
   padding:22px 60px;
   flex-wrap:wrap;
   gap:20px;
