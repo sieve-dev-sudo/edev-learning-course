@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="km">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Design | EDev Learning</title>
-<link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design | EDev Learning</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
 <nav class="navbar">
   <a href="../index.html" class="logo">EDev Learning <span class="moon">🌙</span></a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="../index.html">HOME</a></li>
     <li><a href="about.html">ABOUT</a></li>
     <li><a href="service.html">SERVICE</a></li>
@@ -21,11 +21,14 @@
     <input type="text" placeholder="Type To text" aria-label="Search">
     <button type="submit">Search</button>
   </form>
+  <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+    <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
 </nav>
 
 <div class="page">
   <div class="page-banner">
-    <div class="eyebrow">STUDENT PROJECTS</div>
     <h1>Design Showcase</h1>
     <p class="crumbs"><a href="../index.html">Home</a> / Design</p>
   </div>
@@ -106,6 +109,8 @@
 <footer class="site-footer">
   &copy; 2026 EDev Learning. All rights reserved.
 </footer>
+
+<script src="../js/main.js"></script>
 
 </body>
 </html>
