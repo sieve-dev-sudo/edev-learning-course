@@ -40,15 +40,6 @@ body{
 }
 
 /* ground / water line */
-.horizon{
-  position:absolute;
-  left:0; right:0;
-  top:62%;
-  height:1px;
-  background:#000;
-  opacity:.4;
-  z-index:2;
-}
 .ground{
   position:absolute;
   left:0; right:0;
@@ -388,13 +379,6 @@ body{
   text-align:center;
   padding:28px 24px 32px;
   border-bottom:1px solid rgba(255,255,255,.08);
-}
-.page-banner .eyebrow{
-  font-family:Arial, Helvetica, sans-serif;
-  color:var(--orange);
-  letter-spacing:2px;
-  font-size:.85rem;
-  font-weight:700;
 }
 .page-banner h1{
   font-size:2.6rem;
