@@ -168,7 +168,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var successEl = form.querySelector('.form-success');
       if (valid) {
-        if (successEl) successEl.hidden = false;
+        if (successEl) {
+          successEl.hidden = false;
+          clearTimeout(form._successTimer);
+          form._successTimer = setTimeout(function () {
+            successEl.hidden = true;
+          }, 15000);
+        }
         form.reset();
         form.querySelectorAll('.field-error').forEach(function (m) { m.remove(); });
       } else if (successEl) {
