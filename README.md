@@ -76,3 +76,17 @@ EDev-Learning-Course/
 1. Clone ឬ download repository នេះ
 2. បើកឯកសារ `index.html` ដោយ browser ណាមួយ ឬប្រើ local dev server (ឧ. VS Code **Live Server**)
 3. រុករកទំព័រតាមរយៈ navbar : Home / About / Service / Projects / Contact
+
+---
+
+## 🔧 Known Limitations & Future Improvements
+
+Project នេះសរសេរជា plain HTML/CSS/JS សុទ្ធ (គ្មាន build tool ឬ framework) ដូច្នេះមានចំណុចខ្លះដែលដឹងស្រាប់ថាមិនទាន់ល្អឥតខ្ចោះ៖
+
+- **Code duplication:** navbar និង social icons (SVG) ត្រូវបាន copy-paste ដដែលៗនៅគ្រប់ទំព័រទាំង 6 ព្រោះគ្មាន templating/include system។ ក្នុង production ពិតប្រាកដគួរប្រើ static site generator (ឧ. 11ty, Astro) ឬ framework component (React/Vue) ដើម្បីចែក navbar/footer ជា component តែមួយ
+- **Inline `onsubmit="return false;"`** លើ search form មិនស្របគ្នាទាំងស្រុងជាមួយ pattern `addEventListener` ដែលប្រើក្នុង `main.js` សម្រាប់ login/contact/signup form; គួរផ្លាស់ទៅ unobtrusive JS ដូចគ្នា
+- **Social links** ប្រើ `href="#"` ទាំងអស់, ជា placeholder សម្រាប់ demo មិនទាន់ភ្ជាប់ទៅ profile ពិតប្រាកដ
+- **គ្មាន `<meta name="description">`** នៅគ្រប់ទំព័រ សម្រាប់ SEO
+- Forms ទាំងអស់ជា **UI demo only** មិនទាន់ភ្ជាប់ទៅ backend/API ពិតប្រាកដ (survives client-side validation តែមិន persist data)
+
+> ចំណុចទាំងនេះមិនប៉ះពាល់ដល់ការដំណើរការនៃគេហទំព័រទេ គ្រាន់តែជា refinement សម្រាប់ដំណាក់កាលបន្ទាប់ (production-ready) ប៉ុណ្ណោះ។
