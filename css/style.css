@@ -99,7 +99,7 @@ body{
 /* ===== NAVBAR (shared across all pages) ===== */
 .navbar{
   position:relative;
-  z-index:10;
+  z-index:30;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -605,6 +605,24 @@ body{
 }
 .site-footer a{color:var(--orange); text-decoration:none;}
 
+/* ===== MOBILE MENU TOGGLE (base, before responsive overrides) ===== */
+.menu-toggle{
+  display:none;
+  width:40px; height:40px;
+  background:transparent;
+  border:1px solid rgba(255,255,255,.3);
+  border-radius:6px;
+  color:var(--white);
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  flex-shrink:0;
+}
+.menu-toggle svg{width:20px;height:20px;}
+.menu-toggle .icon-close{display:none;}
+.menu-toggle.is-open .icon-open{display:none;}
+.menu-toggle.is-open .icon-close{display:block;}
+
 /* ===== RESPONSIVE ===== */
 @media(max-width:1100px){
   .hero-content{flex-direction:column; align-items:center;}
@@ -628,6 +646,8 @@ body{
   .logo{font-size:1.5rem;}
   .hero-text h1{font-size:1.8rem;}
   .menu-toggle{display:flex;}
+  .navbar{justify-content:space-between;}
+  .search-box{display:none;}
   .nav-links{
     display:none;
     position:absolute;
@@ -637,6 +657,7 @@ body{
     flex-direction:column;
     gap:0;
     background:#0d1b2e;
+    box-shadow:0 12px 24px rgba(0,0,0,.4);
     border-top:1px solid rgba(255,255,255,.08);
     border-bottom:1px solid rgba(255,255,255,.08);
     z-index:20;
@@ -646,24 +667,6 @@ body{
   .nav-links li{width:100%;}
   .nav-links a{display:block; padding:16px 24px; border-bottom:1px solid rgba(255,255,255,.06);}
 }
-
-/* ===== MOBILE MENU TOGGLE ===== */
-.menu-toggle{
-  display:none;
-  width:40px; height:40px;
-  background:transparent;
-  border:1px solid rgba(255,255,255,.3);
-  border-radius:6px;
-  color:var(--white);
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  flex-shrink:0;
-}
-.menu-toggle svg{width:20px;height:20px;}
-.menu-toggle .icon-close{display:none;}
-.menu-toggle.is-open .icon-open{display:none;}
-.menu-toggle.is-open .icon-close{display:block;}
 
 /* ===== SCROLL REVEAL ===== */
 .reveal{
